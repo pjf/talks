@@ -1,0 +1,37 @@
+#!/usr/bin/pinpoint
+
+[duration=30]
+--
+@include <intro.pin>
+@include <why-space.pin>
+@include <asteroid-mining.pin>
+@include <solar-sails.pin>
+@include <japanese-craft.pin>
+@include <water.pin>
+// Move asteroid avoidance to here?
+
+// @include <solar-satellites.pin>
+@include <16-psyche.pin>
+
+// @include <outro.pin>
+
+// - Resource usage on Earth
+// - Things common in space, but rare on Earth
+// - Discussion on how this solves some specific shortages, but FFS recycle plz kthx
+// - Hurdles to use of space resources: in-situ vs towage
+// - Potential bulk transport using solar sails
+// - Side-branch: Why Japanese space-craft fill me with joy.
+// - Skipping over different asteroid types, because I don't have time
+// - Water: Why it's great in space
+// - Towage tech could be used to prevent asteroid collisions.
+// - Orbital industries: building craft, sails, and solar powered sallites.
+// - Seriously though, solar powered satellites. So much more efficient than Earth-based solar.
+// - Ionospheric restrictions of beamed microwave power to Earth-based stations.
+// - Discussion of how a misfocused beam won't kill you, but will make a lot of people very angry when their WiFi goes down
+// - High-density microwave power to lunar industries is totally legit, has less interference with passing satellites, and fewer people using WiFi. (But I have to double-check the physics.)
+// - Supporting space industries with space fountains. What could go wrong?
+// - Ceres and 16-Psyche, because OMG, most favourite planetoids ever.
+// - Interplanetary transfer network?
+// - Global threats to humanity over the next 400 years.
+// - Something cute because the last dot-point was really dark.
+// 
