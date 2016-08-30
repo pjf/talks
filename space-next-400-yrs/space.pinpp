@@ -17,8 +17,7 @@
 // Move asteroid avoidance to here?
 
 @include <16-psyche.pin>
-
-// @include <outro.pin>
+@include <outro.pin>
 
 // - Resource usage on Earth
 // - Things common in space, but rare on Earth
