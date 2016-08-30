@@ -10,12 +10,12 @@
 @include <intro.pin>
 @include <why-space.pin>
 @include <asteroid-mining.pin>
+@include <solar-satellites.pin>
 @include <solar-sails.pin>
 @include <japanese-craft.pin>
 @include <water.pin>
 // Move asteroid avoidance to here?
 
-// @include <solar-satellites.pin>
 @include <16-psyche.pin>
 
 // @include <outro.pin>

@@ -17,6 +17,9 @@ Always solar
 noon
 
 # MOAR effiency
+#
+# 5x more effective than perfect cells according to http://www.powersat.com/details.html
+# Up to 25x more effective in cloudy areas.
 --
 National Goals:
 
@@ -50,6 +53,36 @@ Power
 Restrictions
 
 # 3% losses
+--
+5GW = 10km diameter
+(78.54 km²)
+(63MW / km²)
+
+# Arndt, G. D., and L. G. Monford. “Solar Power Satellite System Sizing Tradeoffs,” 1981.
+# http://ntrs.nasa.gov/search.jsp?R=19810009968.
+--
+Desert Sunlight
+550MW plant
+16 km²
+
+(34MW/km²)
+
+# If it was running at full capacity 24hrs
+--
+Averages 147 MW
+
+= 9.2MW/km²
+
+# Yearly output in MW-h, divided by number of hours in a year
+# https://en.wikipedia.org/wiki/Desert_Sunlight_Solar_Farm
+--
+Space Based Solar
+almost 7 times more
+effective per unit land
+--
+Continuously
+Running
+
 --
 Doesn't fry
 birds
