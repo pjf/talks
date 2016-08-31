@@ -18,3 +18,10 @@ Images: By their respective owners (see where they're referenced in slides for d
 
 Everything is a plain text file under the hood, so you can just read files in
 your editor if you don't want to muck around with `pinpoint` or `pinpp`
+
+## Bonus Video
+
+You should go watch
+[Wanderers](http://www.erikwernquist.com/wanderers/film.html), a four-minute
+film by Erik Wernquist that closely matches what I'd love to see as the future
+of humanity in space.
