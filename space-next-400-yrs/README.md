@@ -25,3 +25,8 @@ You should go watch
 [Wanderers](http://www.erikwernquist.com/wanderers/film.html), a four-minute
 film by Erik Wernquist that closely matches what I'd love to see as the future
 of humanity in space.
+
+## Citations and further resources
+
+You can find my citation and reference database for this talk
+[in Zotero](https://www.zotero.org/pjf/items/collectionKey/QMIE7ZWJ).
