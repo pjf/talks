@@ -1,0 +1,143 @@
+Add more
+cloud
+
+# (Pic?)
+-- [images/lambda.png]
+
+# AWS Lambda
+--
+"Serverless"
+--
+You write
+an application
+--
+You give it
+to Lambda
+--
+It runs as
+needed
+--
+"40ms lifecycle"
+--
+1M free
+requests/month
+--
+$0.0000002/request
+thereafer
+--
+400,000GB-seconds
+free compute/month
+--
+512MB RAM?
+9.25 DAYS compute
+
+# That's $6,000 USD of
+# Twilio costs PER MONTH
+# before AWS charges me
+--
+Essentially
+free
+--
+Easy?
+--
+S3 Dance
+--
+API Gateway
+--
+IAM Services
+-- [images/lolcommit-rr.jpg]
+
+# You can tell from my lolcommits
+# that I'm not having fun
+-- [images/zappa.jpg]
+
+# Thank goodness for Zappa
+--
+Basically
+magic
+--
+Write a
+flask app
+--
+Zappa does
+heavy lifting
+-- [font=monospace 50px][text-align=left]
+from flask import Flask, request
+app = Flask(__name__)
+
+from twilio import twiml
+-- [font=monospace 50px][text-align=left]
+tunes = [
+    None,   # Zero is always the menu
+    {
+        'src': "https://www.youtube.com/watch?v=b1WWpKEPdT4",
+        'description': "Eight bit",
+        'by': "Kita Khyber",
+        'url': "https://dl.dropboxusercontent.com/u/9702672/music/8-Bit%20Rick%20Roll.mp3",
+    },
+    {
+        'src': "https://www.youtube.com/watch?v=q-9KqwCFDJs",
+        'description': "Dubstep",
+        'by': "Crystalize",
+        'url': "https://dl.dropboxusercontent.com/u/9702672/music/Rick-Astley-Dubstep.mp3",
+    },
+-- [font=monospace 50px][text-align=left]
+menu  = "Welcome to the national Rick Astley hotline. "
+menu += "You may make your selection at any time.\n"
+
+for idx, song in enumerate(tunes):
+    if song is None:
+        continue
+
+    menu += "To listen to {}".format(song['description'])
+
+    if 'by' in song:
+        menu += " by {}".format(song['by'])
+
+    menu += ", press {}.\n".format(idx)
+
+menu += "To hear these options again, press zero.\n"
+menu += "If you do not wish to be rick-rolled, please hang up now."
+-- [font=monospace 50px][text-align=left]
+    # By calling functions on gather, digits can be pressed during the song
+    # playback *and* the menu afterwards.
+    gather = response.gather(numDigits=1, timeout=10)
+    gather.play(tune['url'])
+    gather.say(menu)
+    
+    # Our goodbye triggers after gather times out.
+    response.say(goodbye)
+
+-- [font=monospace 50px][text-align=left]
+@app.route("/", methods = ['GET','POST'])
+def original():
+
+    selection = request.values.get('Digits')
+
+    # Without a selection, play the original
+    if selection is None:
+        return str(play_tune(_original))
+
+    ...
+
+-- [images/zappa.png]
+
+-- [images/zappa-iam-roles.png]
+
+-- [images/zappa-y-u-no-work.png]
+
+-- [images/zappa-update.png]
+
+# You can have permissions in zip files.
+# AWS cares. :(
+--
+🎈🎆🍾
+
+# Finally got it working!
+--
+$ zappa tail
+--
+$ zappa status
+--
+Zappa is
+seriously cool
