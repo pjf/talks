@@ -1,0 +1,13 @@
+#!/usr/bin/pinpoint
+
+[font=Sans 200px]
+[white][text-color=black]
+[shading-opacity=0.0]
+[text-align=center]
+[duration=45]
+
+--
+
+@include <intro.pin>
+@include <intro2.pin>
+@include <twilio.pin>

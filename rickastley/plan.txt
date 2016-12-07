@@ -1,0 +1,17 @@
+
+
+- Zappa screenshot
+- Deploy (and fail)
+- Make credentials file (IAM, etc)
+- Deploy again (and fail?)
+- Make config file (region)
+- Run `aws configure` rather than rolling my own
+- Update config to not delete the local zip
+- Cry into google a lot
+- Discover that zip files can contain unix permissions
+- Discover that AWS cares a lot about this
+- File https://github.com/Miserlou/Zappa/issues/484
+- Get it working, yay!
+- `zappa update production` rocks
+- `zappa tail production` is great!
+
