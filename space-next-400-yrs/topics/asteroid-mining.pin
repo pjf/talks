@@ -15,7 +15,7 @@ boggling
 # of resources
 --
 500m
-astroid
+asteroid
 --
 All propellant
 EVER USED
@@ -27,7 +27,7 @@ x200!
 
 Asterank.com
 
-# Easier to reach than the movie,
+# Easier to reach than the moon,
 # energetically
 
 # TODO: Prices on asteroids assume returning
@@ -86,7 +86,10 @@ Successful mission
 could collapse
 global prices
 
-# Suciu, Peter. “Asteroid Mining Venture Could Change Supply/Demand Ratio On Earth,” April 28, 2012. http://www.redorbit.com/news/space/1112523850/asteroid-mining-venture-could-change-supplydemand-ratio-on-earth/.
+<span font="50px">Suciu, Peter. “Asteroid Mining Venture Could</span>
+<span font="50px">Change Supply/Demand Ratio On Earth,” April 28, 2012.</span>
+
+# Cite: http://www.redorbit.com/news/space/1112523850/asteroid-mining-venture-could-change-supplydemand-ratio-on-earth/
 --
 Mission
 Successful!
@@ -101,7 +104,7 @@ meteorite
 Captmondo
 CC-BY-SA
 
-# Asteroids as *so* rich
+# Asteroids are *so* rich
 
 --
 BILLIONS
