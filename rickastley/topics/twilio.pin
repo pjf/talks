@@ -1,0 +1,187 @@
+Twilio
+
+# Pic would be nice, eh?
+--
+VoIP as
+a service
+
+# Also other things.
+
+-- [images/numbers-au.png]
+
+# Provision
+# phone numbers
+
+-- [images/numbers-ca.png]
+
+# Not are all as expensive
+# as Australia.
+--
+Send/Receive
+SMS
+-- [font=monospace 50px][text-align=left]
+
+my $sms = SMS::Send->new( 'Twilio',
+    _accountsid => 'SomeSID',
+    _authtoken  => 'SomeSecret',
+    _from       => '+1-555-5555-5555'
+);
+
+$sms->send_sms(
+    to => "+1-555-1337-1337',
+    text => "Hello World!"
+);
+
+
+# Almost certainly a module
+# in your favourite language
+--
+Make/Receive
+Calls
+-- [images/twilio-config.png]
+
+--
+TwiML
+
+# A flavour of XML
+-- [font=monospace 50px][text-align=left]
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Play>https://api.twilio.com/cowbell.mp3</Play>
+</Response>
+
+-- [font=monospace 50px][text-align=left]
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Response&gt;
+    &lt;Play <b>loop="10"</b>&gt;https://api.twilio.com/cowbell.mp3&lt;/Play&gt;
+&lt;/Response&gt;
+
+--
+Outbound
+Calls
+-- [font=monospace 50px][text-align=left]
+use WWW::Twilio::API;
+
+my $lucky_person = shift || die "Usage: $0 phone-number";
+
+my $rick = WWW::Twilio::API->new(
+    AccountSid => $SecretSid,
+    AuthToken  => $SecretToken,
+);
+
+-- [font=monospace 50px][text-align=left]
+my $response = $rick->POST( 'Calls',
+    From => '+61386521453',
+    To   => $lucky_person,
+    Url  => $your_server,
+);
+
+say $response->{content};
+--
+Version 1
+
+# Version 1 was really just a number
+# I was using for outbound SMS as part
+# of my exobrain, and I made it so that
+# it played Rick Astley if anyone actually
+# called.
+
+--
+April 1st
+2016
+
+# For April 1st, I decided to expand matters.
+-- [images/dancer.png]
+
+--
+Interactive
+Menus
+--
+Remixes
+
+# TODO: Pic here
+-- [font=monospace 50px][text-align=left]
+my %tunes = (
+    1 => {
+        # https://www.youtube.com/watch?v=b1WWpKEPdT4
+        description => "Eight bit",
+        by => "Kita Khyber",
+        url => "https://dl.dropboxusercontent.com/u/9702672/music/8-Bit%20Rick%20Roll.mp3",
+    },
+    2 => {
+        # https://www.youtube.com/watch?v=q-9KqwCFDJs
+        description => "Dubstep",
+        by => "Crystalize",
+        url => "https://dl.dropboxusercontent.com/u/9702672/music/Rick-Astley-Dubstep.mp3",
+    },
+    ...
+
+-- [font=monospace 50px][text-align=left]
+my $menu = "Welcome to the national Rick Astley hotline. "
+         . "You may make your selection at any time.\\n";
+
+foreach my $key (sort keys %tunes) {
+    my $artist = $tunes{$key}{by} || "unknown";
+    my $desc   = $tunes{$key}{description};
+    $menu     .= "To listen to $desc by $artist, press $key.\\n";
+}
+
+$menu .= "To hear these options again, press zero.\\n";
+$menu .= "If you do not wish to be rick-rolled, please hang up now.";
+
+-- [font=monospace 50px][text-align=left]
+
+sub Say  { return qq{<Say>@_</Say>}   }
+sub Play { return qq{<Play>@_</Play>} }
+
+func Gather($url!, @args) { 
+    return qq{<Gather numDigits="1" timeout="10" action="$url">@args</Gather>} 
+}
+
+-- [font=monospace 50px][text-align=left]
+
+any '/' => sub {
+    selection = param "Digits";
+
+    # No selection is a first-time caller.
+    if (not defined $selection) {
+        return PlayTune($original);
+    }
+
+    # Play a tune selection, if we have one.
+    elsif (my $tune = $tunes{$selection}) {
+        return PlayTune($tune);
+    }
+
+    # Otherwise play our menu.
+    return Menu();
+}
+
+dance;
+
+--
+Version 2
+--
+Downside...
+--
+Single
+server
+--
+micro EC2
+
+# Already heavily
+# loaded at times
+--
+Occasional
+down-time
+
+# Twilio will email you
+# if there's an error
+
+-- [images/twitter-rick.png]
+
+-- [images/usage-graph.png]
+
+# By now people were using it
+# frequently
+
