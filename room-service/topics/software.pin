@@ -1,0 +1,55 @@
+2,300 lines of C++
+across 43 files
+--
+Event Based
+-- [text-align=left]
+* Goal evaluation
+* Hunger
+* Movement
+* Messages
+* Hacking
+* De-Hacking
+* Door Unlocks
+--
+Framework
+--
+Supports
+Multiple
+Games
+--
+Pluggable
+game files
+
+# There's only one game I know of, which
+# is ours.
+--
+    GameData/
+
+-- [font=monospace 50px][text-align=left]
+    // Name, ID, floor, code, LED
+    map.newRoom("Wine Cellar",    5, "0", "005", 45);
+    map.newRoom("East Corridor", 12, "0", NULL,  38);
+
+    // Room, room, code, LED
+    map.newBiDoor(5, 12, "0501", 46);
+
+# Floor is a string because it's something
+# a player might punch into the console.
+--
+    new Actor (
+        "Shia LaBeouf",     // Actual Cannibal
+        10 * SECONDS,       // Movement Speed
+        5,                  // Starting Room
+        15,                 // Hunger Break
+        shiaGoals,          // Regular Goals
+        hungryGoals         // Hungry Goals
+    );
+--
+Game Runner
+Console
+-- [images/software-console.jpg]
+
+--
+github.com
+/PopUpPlayground/room-service
+--

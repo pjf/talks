@@ -1,0 +1,16 @@
+#!/usr/bin/pinpoint
+
+[font=Sans 200px]
+[white][text-color=black]
+[shading-opacity=0.0]
+[text-align=center]
+[duration=20]
+
+--
+
+@include <intro.pin>
+@include <hardware.pin>
+@include <software.pin>
+@include <platformio.pin>
+@include <lessons.pin>
+@include <current.pin>

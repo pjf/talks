@@ -1,0 +1,49 @@
+Writing Escape Room
+Games using Arduino
+and C++ and Platformio
+
+CC-BY
+Paul '@pjf' Fenwick
+--
+Room Service
+--
+Scary
+Puzzle-Solving
+Reverse-Escape Room
+Game
+-- [images/outside.jpg]
+
+# It's a scary game.
+
+-- [images/kitchen.jpg]
+
+# Players are hired as "serving staff"
+# But discover it's a cannibal's convention
+# They're going to be "served"
+
+-- [images/puzzle.jpg]
+
+# Players have to solve puzzles,
+# which are hidden around the room
+
+-- [images/installed.jpg]
+
+# On the wall is a map, showing movements
+# and with lockable doors
+
+-- [images/displays.jpg]
+
+# Players enter codes into the display
+
+-- [images/which-door.jpg]
+
+--
+Pretty
+Cool
+
+-- [text-align=left]
+* Costumed actors
+* Special effects
+* Creepy voice-overs
+* Fun
+

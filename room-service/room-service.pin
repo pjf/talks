@@ -1,0 +1,312 @@
+#!/usr/bin/pinpoint
+
+[font=Sans 200px]
+[white][text-color=black]
+[shading-opacity=0.0]
+[text-align=center]
+[duration=20]
+
+--
+
+Writing Escape Room
+Games using Arduino
+and C++ and Platformio
+
+CC-BY
+Paul '@pjf' Fenwick
+--
+Room Service
+--
+Scary
+Puzzle-Solving
+Reverse-Escape Room
+Game
+-- [images/outside.jpg]
+
+# It's a scary game.
+
+-- [images/kitchen.jpg]
+
+# Players are hired as "serving staff"
+# But discover it's a cannibal's convention
+# They're going to be "served"
+
+-- [images/puzzle.jpg]
+
+# Players have to solve puzzles,
+# which are hidden around the room
+
+-- [images/installed.jpg]
+
+# On the wall is a map, showing movements
+# and with lockable doors
+
+-- [images/displays.jpg]
+
+# Players enter codes into the display
+
+-- [images/which-door.jpg]
+
+--
+Pretty
+Cool
+
+-- [text-align=left]
+* Costumed actors
+* Special effects
+* Creepy voice-overs
+* Fun
+
+--
+Hardware
+
+-- [images/teensy-18x2.jpg]
+
+# Teensy 3.2 from pjrc
+# 16x2 display w/I2C backback from TronixLabs
+# 
+# Teensys support most of the STL
+
+-- [images/tlc5947.jpg]
+
+# TLC-5947 from AdaFruit (lots!)
+-- [images/wire-bundles.jpg]
+
+# A lot of wires!
+-- [images/wires.jpg]
+
+# OMG, so many wires.
+-- [images/testing.jpg]
+
+# We were pretty happy to get
+# them running
+
+-- [images/map.jpg]
+
+# And the map looks really cool.
+--
+2,300 lines of C++
+across 43 files
+--
+Event Based
+-- [text-align=left]
+* Goal evaluation
+* Hunger
+* Movement
+* Messages
+* Hacking
+* De-Hacking
+* Door Unlocks
+--
+Framework
+--
+Supports
+Multiple
+Games
+--
+Pluggable
+game files
+
+# There's only one game I know of, which
+# is ours.
+-- [font=monospace 50px][text-align=left]
+GameData/
+
+-- [font=monospace 50px][text-align=left]
+    // Name, ID, floor, code, LED
+    map.newRoom("Wine Cellar",    5, "0", "005", 45);
+    map.newRoom("East Corridor", 12, "0", NULL,  38);
+
+    // Room, room, code, LED
+    map.newBiDoor(5, 12, "0501", 46);
+
+# Floor is a string because it's something
+# a player might punch into the console.
+-- [font=monospace 50px][text-align=left]
+new Actor (
+    "Shia LaBeouf",     // Actual Cannibal
+    10 * SECONDS,       // Movement Speed
+    5,                  // Starting Room
+    15,                 // Hunger Break
+    shiaGoals,          // Regular Goals
+    hungryGoals         // Hungry Goals
+);
+--
+Game Runner
+Console
+-- [images/software-console.jpg]
+
+--
+github.com
+/PopUpPlayground/room-service
+--
+Platformio.org
+--
+DUCKING
+AMAZING
+--
+Everything from
+the command-line
+
+# The arduino GUI isn't my preferred
+# environment. I want to use vim.
+-- [font=monospace 50px][text-align=left]
+platformio run -e teensy32
+-- [font=monospace 50px][text-align=left]
+platformio run -e teensy32 --target upload
+-- [font=monospace 50px][text-align=left]
+platformio run -e native
+-- [font=monospace 50px][text-align=left]
+platformio.ini
+-- [font=monospace 50px][text-align=left]
+[env:teensy32]
+platform = teensy
+framework = arduino
+board = teensy31
+-- [font=monospace 50px][text-align=left]
+[env:local]
+platform = native
+--
+But wait!
+--
+My laptop doesn't
+have that hardware
+--
+Main loop:
+
+1. Update game state
+2. Update hardware
+-- [font=monospace 50px][text-align=left]
+game.tick(...);
+
+hw.updateConsole(...);
+hw.updateKeypad(...);
+-- [font=monospace 50px][text-align=left]
+    game.tick(...);
+
+    #ifndef NATIVE
+        hw.updateConsole(...);
+        hw.updateKeypad(...);
+    #endif
+-- [font=monospace 50px][text-align=left]
+[env:local]
+platform = native
+build_flags = -DNATIVE
+-- [font=monospace 50px][text-align=left]
+[env:native]
+platform = native
+build_flags = -DNATIVE -DROOMSERVICE
+--
+Makefile
+-- [font=monospace 50px][text-align=left]
+native:
+    platformio run -e native
+-- [font=monospace 50px][text-align=left]
+valgrind: native
+    valgrind .pioenvs/native/program
+-- [font=monospace 50px][text-align=left]
+monitor:
+    platformio device monitor
+-- [font=monospace 50px][text-align=left]
+test:
+    platformio test -e local
+--
+What!?
+Tests?!
+--
+Unity
+Test API
+-- [font=monospace 50px][text-align=left]
+test/pathfinding/Pathfinding.cpp
+-- [font=monospace 50px][text-align=left]
+void test_Pathfinding() {
+
+    Map map;
+
+    // 1---2---3---5
+    //     |   |
+    //     4---6
+
+    map.newRoom("Foyer",   1,"1");
+    map.newRoom("Hub",     2,"1");
+    map.newRoom("Porch",   3,"1");
+    map.newRoom("SideRoom",4,"1");
+    map.newRoom("Garden",  5,"1");
+    map.newRoom("Passage", 6,"1");
+-- [font=monospace 50px][text-align=left]
+map.newBiDoor(1,2);
+map.newBiDoor(2,4);
+map.newBiDoor(2,3,"023");    // Lockable
+map.newBiDoor(5,3);
+map.newBiDoor(4,6);
+map.newBiDoor(6,3);
+-- [font=monospace 50px][text-align=left]
+// Simple path
+path_t path;
+map.findPath(1,2,&path,print);
+
+TEST_ASSERT_EQUAL(2,path.at(0));
+-- [font=monospace 50px][text-align=left]
+std::cerr << "\n--- Plotting route: 1-5 ---\n\n";
+map.findPath(1,5,&path,print);
+
+TEST_ASSERT_EQUAL(2,path.at(0));
+TEST_ASSERT_EQUAL(3,path.at(1));
+TEST_ASSERT_EQUAL(5,path.at(2));
+--
+Lessoned
+Learned
+--
+FOSS development
+is awesome
+
+# I've had multiple times
+# where folks have swept in
+# and fixed my bugs for me.
+--
+Pathfinding
+is hard
+
+# It's the most complex code
+# Used the most memory
+--
+Debugging
+memory fragmentation
+on an embedded device
+is awful. :(
+-- [images/despair.jpg]
+
+# Lolcommits is amazing.
+--
+Current
+State
+--
+ElsewhereRooms
+.com
+--
+Venue
+Issues
+
+# Looking for
+# another venue
+--
+PopUpPlayground
+.com.au
+--
+github.com/
+PopUpPlayground/
+room-service
+
+# Lots of commit history
+# Lots of issues
+--
+Thank you
+
+@pjf
+@PopUpPlayers
+
+github.com/pjf/talks
+--
+Questions?
+--
+

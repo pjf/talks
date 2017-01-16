@@ -1,0 +1,26 @@
+Hardware
+
+-- [images/teensy-18x2.jpg]
+
+# Teensy 3.2 from pjrc
+# 16x2 display w/I2C backback from TronixLabs
+# 
+# Teensys support most of the STL
+
+-- [images/tlc5947.jpg]
+
+# TLC-5947 from AdaFruit (lots!)
+-- [images/wire-bundles.jpg]
+
+# A lot of wires!
+-- [images/wires.jpg]
+
+# OMG, so many wires.
+-- [images/testing.jpg]
+
+# We were pretty happy to get
+# them running
+
+-- [images/map.jpg]
+
+# And the map looks really cool.

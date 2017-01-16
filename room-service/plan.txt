@@ -1,0 +1,23 @@
+- Introduction to the game
+- A few pictures
+- But what's interesting is how it works
+- x many lines of C++, hardware manifest
+- OMG, so much wiring
+- Platformio being amazing
+- Native Builds
+    - Split running game into two parts.
+    - 1.  Updating the game state.
+    - 2a. Updating the hardware.
+    - 2b. Reading player input (which is also updating hardware).
+    - Can run test suites and native code by just running 1.
+    - Can run VALGRIND. OMG OMG.
+- Test suites
+- (maybe) Memory management.
+    - Stack based good, heap based bad.
+    - Flag to indicate re-use of events.
+    - You never want to debug memory fragmentation on embedded hardware.
+    - Turns out the path-finder was to blame.
+- Future improvements
+- Links to code
+- Thank you!
+

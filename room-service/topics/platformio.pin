@@ -1,0 +1,113 @@
+Platformio.org
+--
+DUCKING
+AMAZING
+--
+Everything from
+the command-line
+
+# The arduino GUI isn't my preferred
+# environment. I want to use vim.
+--
+    platformio run -e teensy32
+--
+    platformio run -e teensy32 --target upload
+--
+    platformio run -e native
+--
+    platformio.ini
+--
+    [env:teensy32]
+    platform = teensy
+    framework = arduino
+    board = teensy31
+--
+    [env:local]
+    platform = native
+--
+But wait!
+--
+My laptop doesn't
+have that hardware
+--
+Main loop:
+
+1. Update game state
+2. Update hardware
+--
+    game.tick(...);
+
+    hw.updateConsole(...);
+    hw.updateKeypad(...);
+-- [font=monospace 50px][text-align=left]
+    game.tick(...);
+
+    #ifndef NATIVE
+        hw.updateConsole(...);
+        hw.updateKeypad(...);
+    #endif
+--
+    [env:local]
+    platform = native
+    build_flags = -DNATIVE
+--
+    [env:native]
+    platform = native
+    build_flags = -DNATIVE -DROOMSERVICE
+--
+Makefile
+--
+    native:
+        platformio run -e native
+--
+    valgrind: native
+        valgrind .pioenvs/native/program
+--
+    monitor:
+        platformio device monitor
+--
+    test:
+        platformio test -e local
+--
+What!?
+Tests?!
+--
+Unity
+Test API
+--
+    test/pathfinding/Pathfinding.cpp
+--
+    void test_Pathfinding() {
+
+        Map map;
+
+        // 1---2---3---5
+        //     |   |
+        //     4---6
+
+        map.newRoom("Foyer",   1,"1");
+        map.newRoom("Hub",     2,"1");
+        map.newRoom("Porch",   3,"1");
+        map.newRoom("SideRoom",4,"1");
+        map.newRoom("Garden",  5,"1");
+        map.newRoom("Passage", 6,"1");
+--
+    map.newBiDoor(1,2);
+    map.newBiDoor(2,4);
+    map.newBiDoor(2,3,"023");    // Lockable
+    map.newBiDoor(5,3);
+    map.newBiDoor(4,6);
+    map.newBiDoor(6,3);
+--
+    // Simple path
+    path_t path;
+    map.findPath(1,2,&path,print);
+
+    TEST_ASSERT_EQUAL(2,path.at(0));
+--
+    std::cerr << "\n--- Plotting route: 1-5 ---\n\n";
+    map.findPath(1,5,&path,print);
+
+    TEST_ASSERT_EQUAL(2,path.at(0));
+    TEST_ASSERT_EQUAL(3,path.at(1));
+    TEST_ASSERT_EQUAL(5,path.at(2));
