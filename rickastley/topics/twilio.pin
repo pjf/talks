@@ -1,6 +1,5 @@
-Twilio
+-- [images/twilio.jpg]
 
-# Pic would be nice, eh?
 --
 VoIP as
 a service
@@ -86,6 +85,8 @@ Version 1
 # it played Rick Astley if anyone actually
 # called.
 
+# And people were calling it frequently.
+
 --
 April 1st
 2016
@@ -159,8 +160,6 @@ any '/' => sub {
 dance;
 
 --
-Version 2
---
 Downside...
 --
 Single
@@ -181,8 +180,12 @@ down-time
 
 # By now people were using it
 # frequently
+#
+# Made with plot.ly and utils/munage-logs.pl in my private rickastley repo.
 
 -- [images/twitter-rick.png]
 
 # And *any* sort of downtime,
 # people will let you know.
+--
+Version 2

@@ -39,12 +39,19 @@ Essentially
 free
 --
 Easy?
+-- [images/quickstart.png]
+
+# 14 pages for the 'quickstart'
 --
-S3 Dance
+No attention
+span
 --
 API Gateway
 --
 IAM Services
+--
+Something with
+S3?
 -- [images/lolcommit-rr.jpg]
 
 # You can tell from my lolcommits
@@ -102,6 +109,11 @@ for idx, song in enumerate(tunes):
 menu += "To hear these options again, press zero.\\n"
 menu += "If you do not wish to be rick-rolled, please hang up now."
 -- [font=monospace 50px][text-align=left]
+
+def play_tune(tune):
+
+    response = twiml.Response()
+
     # By calling functions on gather, digits can be pressed during the song
     # playback *and* the menu afterwards.
     gather = response.gather(numDigits=1, timeout=10)
@@ -110,6 +122,8 @@ menu += "If you do not wish to be rick-rolled, please hang up now."
     
     # Our goodbye triggers after gather times out.
     response.say(goodbye)
+
+    return response
 
 -- [font=monospace 50px][text-align=left]
 @app.route("/", methods = ['GET','POST'])
@@ -137,10 +151,16 @@ def original():
 🎈🎆🍾
 
 # Finally got it working!
---
-$ zappa tail
+#
+# Live demo of call?
 --
 $ zappa status
+-- [images/zappa-status.png]
+
+--
+$ zappa tail
+-- [images/zappa-tail.png]
+
 --
 Zappa is
 seriously cool
