@@ -96,10 +96,9 @@ April 1st
 --
 Interactive
 Menus
---
+-- [images/remixes.jpg][top][text-color=white]
 Remixes
 
-# TODO: Pic here
 -- [font=monospace 50px][text-align=left]
 my %tunes = (
     1 => {

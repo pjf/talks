@@ -55,6 +55,9 @@ IAM Services
 --
 Basically
 magic
+
+# Lets you deploy, at scale,
+# technologies you don't understand.
 --
 Write a
 flask app
@@ -83,7 +86,7 @@ tunes = [
     },
 -- [font=monospace 50px][text-align=left]
 menu  = "Welcome to the national Rick Astley hotline. "
-menu += "You may make your selection at any time.\n"
+menu += "You may make your selection at any time.\\n"
 
 for idx, song in enumerate(tunes):
     if song is None:
@@ -96,7 +99,7 @@ for idx, song in enumerate(tunes):
 
     menu += ", press {}.\n".format(idx)
 
-menu += "To hear these options again, press zero.\n"
+menu += "To hear these options again, press zero.\\n"
 menu += "If you do not wish to be rick-rolled, please hang up now."
 -- [font=monospace 50px][text-align=left]
     # By calling functions on gather, digits can be pressed during the song
