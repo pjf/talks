@@ -76,6 +76,8 @@ my $response = $rick->POST( 'Calls',
 );
 
 say $response->{content};
+
+# Live Example: `rickme`
 --
 Version 1
 

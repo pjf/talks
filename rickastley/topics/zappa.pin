@@ -126,33 +126,55 @@ def play_tune(tune):
     return response
 
 -- [font=monospace 50px][text-align=left]
-@app.route("/", methods = ['GET','POST'])
-def original():
+@app.route("/", methods = ['GET', 'POST'])
+def handle_call():
 
     selection = request.values.get('Digits')
 
-    # Without a selection, play the original
+    # No selection? Play the original
     if selection is None:
-        return str(play_tune(_original))
+        return play_tune( _original )
 
-    ...
+    # Zero is always our menu
+    elif selection == 0:
+        return play_menu()
+
+    # Here comes a funky remix!
+    else:
+        return play_tune( tunes[selection] )
 
 -- [images/zappa.png]
 
 -- [images/zappa-iam-roles.png]
 
--- [images/zappa-y-u-no-work.png]
+-- [font=monospace 50px][text-align=left]
 
--- [images/zappa-update.png]
+~/.aws/credentials
+
+~/.aws/config
+
+# Set up my AWS credentials
+
+-- [images/zappa-y-u-no-work.png]
 
 # You can have permissions in zip files.
 # AWS cares. :(
+
+-- [font=monospace 50px][text-align=left]
+
+chmod -R a+r .
+
+# Make sure everything is readable
+
+-- [images/zappa-update.png]
+
 --
 🎈🎆🍾
 
 # Finally got it working!
 #
 # Live demo of call?
+# (Or later if doing live tail)
 --
 $ zappa status
 -- [images/zappa-status.png]
@@ -160,6 +182,9 @@ $ zappa status
 --
 $ zappa tail
 -- [images/zappa-tail.png]
+
+# Live tail
+# `utils/filter`
 
 --
 Zappa is
