@@ -94,72 +94,14 @@ April 1st
 2016
 
 # For April 1st, I decided to expand matters.
--- [images/dancer.png]
-
 --
 Interactive
 Menus
+
 -- [images/remixes.jpg][top][text-color=white]
 Remixes
 
--- [font=monospace 50px][text-align=left]
-my %tunes = (
-    1 => {
-        # https://www.youtube.com/watch?v=b1WWpKEPdT4
-        description => "Eight bit",
-        by => "Kita Khyber",
-        url => "https://dl.dropboxusercontent.com/u/9702672/music/8-Bit%20Rick%20Roll.mp3",
-    },
-    2 => {
-        # https://www.youtube.com/watch?v=q-9KqwCFDJs
-        description => "Dubstep",
-        by => "Crystalize",
-        url => "https://dl.dropboxusercontent.com/u/9702672/music/Rick-Astley-Dubstep.mp3",
-    },
-    ...
-
--- [font=monospace 50px][text-align=left]
-my $menu = "Welcome to the national Rick Astley hotline. "
-         . "You may make your selection at any time.\\n";
-
-foreach my $key (sort keys %tunes) {
-    my $artist = $tunes{$key}{by} || "unknown";
-    my $desc   = $tunes{$key}{description};
-    $menu     .= "To listen to $desc by $artist, press $key.\\n";
-}
-
-$menu .= "To hear these options again, press zero.\\n";
-$menu .= "If you do not wish to be rick-rolled, please hang up now.";
-
--- [font=monospace 50px][text-align=left]
-
-sub Say  { return qq{<Say>@_</Say>}   }
-sub Play { return qq{<Play>@_</Play>} }
-
-func Gather($url!, @args) { 
-    return qq{<Gather numDigits="1" timeout="10" action="$url">@args</Gather>} 
-}
-
--- [font=monospace 50px][text-align=left]
-
-any '/' => sub {
-    selection = param "Digits";
-
-    # No selection is a first-time caller.
-    if (not defined $selection) {
-        return PlayTune($original);
-    }
-
-    # Play a tune selection, if we have one.
-    elsif (my $tune = $tunes{$selection}) {
-        return PlayTune($tune);
-    }
-
-    # Otherwise play our menu.
-    return Menu();
-}
-
-dance;
+-- [images/dancer.png]
 
 --
 Downside...
