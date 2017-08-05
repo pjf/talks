@@ -181,7 +181,11 @@ down-time
 # By now people were using it
 # frequently
 #
-# Made with plot.ly and utils/munage-logs.pl in my private rickastley repo.
+# Made with plot.ly and utils/munge-logs.pl in my private rickastley repo.
+
+-- [images/usage-graph-calls.png]
+
+# About a thousand calls per month
 
 -- [images/twitter-rick.png]
 
