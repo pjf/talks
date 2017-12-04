@@ -1,0 +1,61 @@
+Working with
+dates
+--
+  $ task add Send Dad birthday card \
+        wait:2017-12-12 
+--
+Wait
+→
+Hide until
+--
+  # Show all waiting tasks
+  $ task waiting 
+--
+  $ task add Send Dad birthday card \
+        wait:2017-12-12 \
+        schedule:2017-12-15 \
+--
+Schedule
+→
+Urgency boost
+after this date
+--
+Scheduled
+<i>hides</i>
+tasks on
+`task ready`
+--
+  $ task add Send Dad birthday card \
+        wait:2017-12-12 \
+        schedule:2017-12-15 \
+        until:2017-12-25
+--
+Until
+—>
+Delete after
+this date
+
+# I want to get better at
+# using this
+--
+Relative dates!
+--
+  $ task add Send Dad birthday card \
+        due:2017-12-18
+        schedule:"due - 3d" \
+        wait:"due - 6d" \
+        until:"due + 3d"
+--
+Relative to
+other tasks
+--
+  $ t ids /conference/
+  8
+
+  $ task add Book flights \
+        schedule: "8.due - 30d"
+        until: "8.due"
+--
+Amazing for
+scripting!
+--

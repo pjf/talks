@@ -1,0 +1,61 @@
+- What is TW?
+    - FOSS, cross-platform, etc
+    - Command-line tool
+    - Methodology neutral
+    - More a "to-do toolkit"
+    - JSON under the hood (but I've never had to go there) (`task export`)
+    - Hugely extensible (more on this later)
+
+- Basic usage:
+    - Adding tasks
+    - Listing tasks
+    - Editing tasks:
+        - Due
+        - Wait
+        - Scheduled
+
+- Annotations
+    - En passant
+
+- Reports!
+
+- Cheat sheet
+
+- Cool things:
+    - Urgency!
+    - Timesheet
+    - Time Tracking (start/stop)
+    - Burndown graph
+    - Filters
+    - Calendar
+    - Meta tags
+    - Start/stop
+    - Reports
+    - Auto-deletion
+    - Contexts
+
+- Customising:
+    - Removing annotations on displays
+    - Filters on reports
+    - Write your own report
+    - Urgency inheritance
+
+- Shell integration
+
+- Server Sync
+
+- Extensions:
+    - TaskOpen
+    - BugWarrior
+
+- Writing extensions:
+    - DOM access (woo!)
+    - Kusarigama
+
+- Things I haven't covered:
+    - Vim access and friends
+    - Tasksh
+
+Bonus cool:
+
+    - Cheat sheet for attendees!

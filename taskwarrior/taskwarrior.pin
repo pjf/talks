@@ -1,0 +1,524 @@
+#!/usr/bin/env pinpoint
+
+[font=Sans 200px]
+[white][text-color=black]
+[shading-opacity=0.0]
+[text-align=center]
+[duration=30]
+
+--
+
+Manage All Your Tasks
+With TaskWarrior
+
+Paul '@pjf' Fenwick
+--
+My story...
+--
+I procrastinate
+--
+(amusing procrastination img)
+--
+Easily
+distracted
+--
+Terrible
+memory
+--
+Task management
+*essential*
+--
+Tried dozens
+of systems
+--
+(Wall Pic)
+# But I always hit a wall
+--
+"Simple and Easy"
+→
+Missing features
+--
+Proprietary
+→
+I can't add features
+--
+I can hack
+things in
+-- [images/PowerAdapterOfDoom.jpg]
+
+# But I rarely feel it's a good idea
+--
+My
+history
+--
+Perl's
+autodie
+
+# I've written parts of the Perl language
+--
+Dwarf Fortress
+mods
+
+# I've written mods for the world's hardest game
+--
+((img: Google Calendar in vim))
+--
+I don't
+need easy
+--
+Flexibility
+
+# I need flexibility
+--
+Extensibility
+
+# and extensibility
+-- [images/taskwarrior.png]
+# So when I heard about TaskWarrior
+--
+Shell-based
+Text-oriented
+--
+Task Management
+System
+--
+((Learning Curve))
+
+# I didn't fear the learning curve
+# Instead, I dived right in
+--
+Most task systems
+do not work
+for most people
+
+# I want acknowledge that..
+--
+TaskWarrior may
+not be for you
+--
+((Glorious))
+
+# But if it is, then it's
+# utterly, utterly glorious
+--
+Tour of features
+I use the most
+--
+There's a *lot*
+more beyond this
+talk
+
+# I'll teach you
+# what I know
+-- [font=monospace 50px][text-align=left]
+
+--
+TaskWarrior
+all the things
+
+# Ack Dirk Deimeke slides
+# https://git.tasktools.org/ST/guides/src/master
+--
+To-do
+list
+--
+Task Management
+Toolkit
+--
+Command-line
+--
+Methodology
+Neutral
+--
+Hugely
+extensible
+--
+taskwarrior.org
+--
+Let's see
+examples!
+-- [font=monospace 50px][text-align=left]
+$ task add Buy plane tickets
+Created task 1.
+-- [font=monospace 50px][text-align=left]
+$ task add Book hotel
+Created task 2.
+
+$ task add Write talk on TaskWarrior
+Created task 3.
+-- [font=monospace 50px][text-align=left]
+$ task
+
+ID Age  Description                   Urg
+== ==== ============================= ====
+ 1 2min Buy plane tickets              1.8
+ 2 2min Book hotel                     1.8
+ 3 1min Write talk on TaskWarrior      1.8
+
+3 tasks
+-- [font=monospace 50px][text-align=left]
+$ task 1 done
+Completed task 1 'Buy plane tickets'.
+Completed 1 task.
+
+$ task
+
+ID Age  Description                   Urg
+== ==== ============================= ====
+ 1 7min Book hotel                     1.8
+ 2 6min Write talk on TaskWarrior      1.8
+
+2 tasks
+--
+Cool
+--
+So...?
+-- [images/task-cheat.png]
+
+# HOLY SMOKES IT DOES EVERYTHING!
+--
+Urgency
+--
+Some tasks
+more important
+-- [font=monospace 50px][text-align=left]
+$ task 2 modify due:+7d
+
+Modifying task 2 'Write talk on TaskWarrior'.
+Modified 1 task.
+-- [font=monospace 50px][text-align=left]
+$ task
+
+ID Age   Due  Description                   Urg
+== ===== ==== ============================= ====
+ 2 17min 6d   Write talk on TaskWarrior      7.4
+ 1 17min      Book hotel                     1.8
+
+2 tasks
+--
+Urgency is
+calculated
+--
+Tags, Projects,
+Deadlines, Priorities
+→
+More Urgency
+--
+Fully
+configurable
+-- [font=monospace 50px][text-align=left]
+~/.taskrc
+
+urgency.user.tag.costly.coefficient = 3.0
+-- [font=monospace 50px][text-align=left]
+urgency.user.project.leisure.coefficient = 0
+-- [font=monospace 50px][text-align=left]
+$ task 31
+
+Name          Value
+============= ==================================================================
+ID            31
+Description   Write full-length talk on using taskwarrior
+                2017-12-03 09:55:54 Sample annotation
+Status        Pending
+Project       speaking.new
+Entered       2017-07-06 00:09:01 (5mo)
+Due           2017-12-04 10:56:05
+Last modified 2017-12-03 09:55:54 (11h)
+Tags          confoo
+Virtual tags  ANNOTATED DUE MONTH PENDING READY TAGGED TOMORROW UDA UNBLOCKED
+              YEAR PROJECT PRIORITY
+UUID          c7318895-be3e-4f4d-adcc-c7db95684ad7
+Urgency       17.97
+Priority      H
+
+    project             1 *    1 =      1
+    annotations       0.8 *    1 =    0.8
+    tags              0.8 *    1 =    0.8
+    due             0.712 *   12 =   8.54
+    age             0.411 *    2 =  0.822
+    UDA priority.H      1 *    6 =      6
+                                   ======
+                                    17.97
+
+
+--
+Priority?
+-- [font=monospace 50px][text-align=left]
+$ task 42 modify priority:H
+-- [font=monospace 50px][text-align=left]
+$ task 42 modify pri:H
+-- [text-align=left]
+Priority:
+
+ - High
+ - Medium
+ - Low
+ - None (default)
+-- [text-align=left]
+But I like:
+
+ - High
+ - Medium
+ - None (default)
+ - Low
+-- [font=monospace 50px][text-align=left]
+uda.priority.values = H,M,,L
+
+# Swap none and low priority levels
+urgency.uda.priority.L.coefficient=0
+urgency.uda.priority..coefficient=1.8
+--
+UDA?
+--
+User Defined
+Attribute
+--
+Add unstructured
+data to tasks
+-- [font=monospace 50px][text-align=left]
+~/.taskrc
+
+uda.customer.type = string
+uda.customer.label = Customer
+-- [font=monospace 50px][text-align=left]
+task add Bake cake customer:'Aperture Science' due:Sunday
+--
+Protect against
+typos?
+-- [font=monospace 50px][text-align=left]
+uda.customer.string = Tyrell,Cyberdyne,Aperture Science,Shinra,Umbrella
+--
+Types:
+ - string
+ - date
+ - duration
+ - numeric
+--
+Super-useful
+for extensions!
+--
+Working with
+dates
+-- [font=monospace 50px][text-align=left]
+$ task add Send Dad birthday card \
+      wait:2017-12-12 
+--
+Wait
+→
+Hide until
+-- [font=monospace 50px][text-align=left]
+# Show all waiting tasks
+$ task waiting 
+-- [font=monospace 50px][text-align=left]
+$ task add Send Dad birthday card \
+      wait:2017-12-12 \
+      schedule:2017-12-15 \
+--
+Schedule
+→
+Urgency boost
+after this date
+--
+Scheduled
+<i>hides</i>
+tasks on
+`task ready`
+-- [font=monospace 50px][text-align=left]
+$ task add Send Dad birthday card \
+      wait:2017-12-12 \
+      schedule:2017-12-15 \
+      until:2017-12-25
+--
+Until
+—>
+Delete after
+this date
+
+# I want to get better at
+# using this
+--
+Relative dates!
+-- [font=monospace 50px][text-align=left]
+$ task add Send Dad birthday card \
+      due:2017-12-18
+      schedule:"due - 3d" \
+      wait:"due - 6d" \
+      until:"due + 3d"
+--
+Relative to
+other tasks
+-- [font=monospace 50px][text-align=left]
+$ t ids /conference/
+8
+
+$ task add Book flights \
+      schedule: "8.due - 30d"
+      until: "8.due"
+--
+Amazing for
+scripting!
+--
+Taskopen
+--
+Opens
+resources
+in annotations
+-- [font=monospace 50px][text-align=left]
+$ task add Track tooth-flossing on Beeminder
+Created task 12.
+
+$ task 12 annotate https://beeminder.com/
+Annotated 1 task.
+-- [font=monospace 50px][text-align=left]
+$ taskopen 12
+-- [font=monospace 50px][text-align=left]
+((Web Browser))
+-- [font=monospace 50px][text-align=left]
+$ task add Finish report
+Created task 13.
+
+$ task 13 annotate ~/report.xlsx
+Annotated 1 task.
+
+$ taskopen 13
+--
+((Libreoffice))
+-- [font=monospace 50px][text-align=left]
+$ task annotate 42 Notes
+$ taskopen 42
+-- [font=monospace 50px][text-align=left]
+((Opens your favourite editor))
+--
+Has lots
+of options
+
+# I also want to extend taskopen
+# to integrate with bugwarrior;
+# stay tuned!
+--
+Working
+with others
+--
+BugWarrior
+--
+((OMG))
+--
+Sync remote
+issue trackers
+to bugwarrior
+--
+Github
+Trello
+Gmail
+JIRA
+--
+Gitlab
+Bitbucket
+Pagure
+Bugzilla
+Trac
+Megaplan
+Teamlab
+Redmine
+Taiga
+Gerrit
+Activecollab
+Phabricator
+VersionOne
+YouTrack
+--
+All my
+tasks in
+one place
+-- [font=monospace 50px][text-align=left]
+~/.bugwarriorrc
+-- [font=monospace 50px][text-align=left]
+[general]
+targets = trello-kate, gmail
+-- [font=monospace 50px][text-align=left]
+[github]
+service = github
+github.username = pjf
+github.login = pjf
+github.token = secret
+github.description_template = {{githubrepo}}#{{githubnumber}} ({{githubshorttype}}) {{githubtitle}}
+--
+Use Trello
+with
+my partner
+-- [font=monospace 50px][text-align=left]
+[trello-kate]
+service = trello
+trello.api_key = secret
+trello.token = secret
+trello.exclude_lists = Done
+trello.only_if_assigned = pfenwick
+trello.description_template = {{trellocard}}
+trello.project_template = kate.trello
+trello.include_boards = secret-specific-board
+--
+Per-board
+settings
+--
+Only tasks
+assigned to me
+--
+Done in Trello
+→
+Done in TaskWarrior
+
+--
+I ignore
+my todo
+lists
+
+# They're stressful and annoying
+# I'd rather be playing Factorio
+--
+I can't ignore
+my shell
+
+# Because I live here
+--
+Shell
+Integration
+-- [font=monospace 50px][text-align=left]
+~/.bashrc
+-- [font=monospace 50px][text-align=left]
+URGENT="❗"
+-- [font=monospace 50px][text-align=left]
+DUETOMORROW="📅"
+-- [font=monospace 50px][text-align=left]
+DUETODAY="😱"
+-- [font=monospace 50px][text-align=left]
+OVERDUE="☠️"
+-- [font=monospace 50px][text-align=left]
+function task_indicator {
+    TASK="task"
+-- [font=monospace 50px][text-align=left]
+if [ `$TASK +READY +OVERDUE count` -gt "0" ]; then
+    echo "$OVERDUE"
+-- [font=monospace 50px][text-align=left]
+elif [ `$TASK +READY +DUETODAY count` -gt "0" ]; then
+    echo "$DUETODAY"
+elif [ `$TASK +READY +TOMORROW count` -gt "0" ]; then
+    echo "$DUETOMORROW"
+elif [ `$TASK +READY urgency \> 10 count` -gt "0" ]; then
+    echo "$URGENT"
+-- [font=monospace 50px][text-align=left]
+    else
+        echo '$'
+    fi
+}
+--
++READY
+→
+Hidden tasks
+don't count
+-- [font=monospace 50px][text-align=left]
+PS1="... \$(task_indicator) ..."
+-- [font=monospace 50px][text-align=left]
+PS1="\[\e]0;\u@\h: \w\a\]"'$(BRANCH=`git rev-parse --abbrev-ref HEAD 2> /dev/null`; if [ -n "$BRANCH" ]; then DIRTY=`git status --porcelain --untracked-files=no 2> /dev/null`; if [ -n "$DIRTY" ]; then echo "'$BRed'$CROSS "; else echo "'$BGreen'$TICK "; fi; fi;)'"$Color_Off${debian_chroot:+($debian_chroot)}\w$BYellow\$(__git_ps1)\$(task_indicator) $Color_Off"
+--
+

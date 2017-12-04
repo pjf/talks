@@ -1,0 +1,71 @@
+Working
+with others
+--
+BugWarrior
+--
+((OMG))
+--
+Sync remote
+issue trackers
+to bugwarrior
+--
+Github
+Trello
+Gmail
+JIRA
+--
+Gitlab
+Bitbucket
+Pagure
+Bugzilla
+Trac
+Megaplan
+Teamlab
+Redmine
+Taiga
+Gerrit
+Activecollab
+Phabricator
+VersionOne
+YouTrack
+--
+All my
+tasks in
+one place
+--
+    ~/.bugwarriorrc
+--
+    [general]
+    targets = trello-kate, gmail
+--
+    [github]
+    service = github
+    github.username = pjf
+    github.login = pjf
+    github.token = secret
+    github.description_template = {{githubrepo}}#{{githubnumber}} ({{githubshorttype}}) {{githubtitle}}
+--
+Use Trello
+with
+my partner
+--
+    [trello-kate]
+    service = trello
+    trello.api_key = secret
+    trello.token = secret
+    trello.exclude_lists = Done
+    trello.only_if_assigned = pfenwick
+    trello.description_template = {{trellocard}}
+    trello.project_template = kate.trello
+    trello.include_boards = secret-specific-board
+--
+Per-board
+settings
+--
+Only tasks
+assigned to me
+--
+Done in Trello
+→
+Done in TaskWarrior
+

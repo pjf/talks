@@ -1,0 +1,37 @@
+Taskopen
+--
+Opens
+resources
+in annotations
+--
+    $ task add Track tooth-flossing on Beeminder
+    Created task 12.
+
+    $ task 12 annotate https://beeminder.com/
+    Annotated 1 task.
+--
+    $ taskopen 12
+--
+    ((Web Browser))
+--
+    $ task add Finish report
+    Created task 13.
+
+    $ task 13 annotate ~/report.xlsx
+    Annotated 1 task.
+
+    $ taskopen 13
+--
+((Libreoffice))
+--
+    $ task annotate 42 Notes
+    $ taskopen 42
+--
+    ((Opens your favourite editor))
+--
+Has lots
+of options
+
+# I also want to extend taskopen
+# to integrate with bugwarrior;
+# stay tuned!

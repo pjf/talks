@@ -1,0 +1,16 @@
+#!/usr/bin/env pinpoint
+
+[font=Sans 200px]
+[white][text-color=black]
+[shading-opacity=0.0]
+[text-align=center]
+[duration=30]
+
+--
+
+@include <intro0.pin>
+@include <intro.pin>
+@include <tidy.pin>
+@include <taskopen.pin>
+@include <bugwarrior.pin>
+@include <shell.pin>
