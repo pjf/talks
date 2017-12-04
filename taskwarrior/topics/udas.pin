@@ -1,0 +1,29 @@
+UDA?
+--
+User Defined
+Attribute
+--
+Add unstructured
+data to tasks
+--
+    ~/.taskrc
+
+    uda.customer.type = string
+    uda.customer.label = Customer
+--
+    task add Bake cake customer:'Aperture Science' due:Sunday
+--
+Protect against
+typos?
+--
+    uda.customer.string = Tyrell,Cyberdyne,Aperture Science,Shinra,Umbrella
+-- [text-align=left]
+Types:
+
+ - string
+ - date
+ - duration
+ - numeric
+--
+Super-useful
+for extensions!

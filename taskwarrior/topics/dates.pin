@@ -11,6 +11,11 @@ Hide until
   # Show all waiting tasks
   $ task waiting 
 --
+  # Hide a task until tomorrow
+  $ task 42 modify wait:tomorrow
+--
+  $ task 42 modify wait:+5d
+--
   $ task add Send Dad birthday card \
         wait:2017-12-12 \
         schedule:2017-12-15 
@@ -49,7 +54,7 @@ Relative dates!
 Relative to
 other tasks
 --
-  $ t ids /conference/
+  $ t /conference/ ids
   8
 
   $ task add Book flights \

@@ -10,7 +10,10 @@
 
 @include <intro0.pin>
 @include <intro.pin>
-@include <tidy.pin>
+@include <tags-projects.pin>
+@include <annotations.pin>
+@include <dates.pin>
+@include <urgency.pin>
 
 Tools and
 Plugins
@@ -18,4 +21,10 @@ Plugins
 @include <taskopen.pin>
 @include <bugwarrior.pin>
 @include <shell.pin>
+@include <much-more.pin>
 @include <outro.pin>
+
+Bonus Section
+--
+@include <udas.pin>
+@include <tips.pin>

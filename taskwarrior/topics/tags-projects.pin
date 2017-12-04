@@ -1,0 +1,118 @@
+Keeping things
+organised
+--
+Tags
+
+# As many tags as you want
+--
+Unstructured
+Many-to-many
+--
+    $ task add Buy mini-screwdriver set +shopping
+    $ task add Ping client on invoice payment +phone +cyberdyne
+--
+    # Fix incorrect client in last task
+    $ task +LATEST modify -cyberdyne +shinra
+--
+Great for
+searching!
+--
+    # Show all phone-related tasks
+
+    $ task +phone
+-- [text-align=left]
+I use for:
+
+ - Resource needed (phone/location)
+ - People invovled
+ - "Costly" tasks (more urgent)
+--
+Automatic
+meta-tags
+
+# We just saw one with +LATEST
+--
+    # Show tasks due in various timeframes
+
+    $ task +YEAR
+    $ task +QUARTER
+    $ task +MONTH
+    $ task +WEEK
+    $ task +TOMORROW
+    $ task +TODAY
+    $ task +OVERDUE
+--
+    # Show tasks missing information
+
+    $ task -SCHEDULED
+    $ task -PROJECT
+    $ task -UNTIL
+--
+Projects
+--
+Hierarchical
+--
+    $ task add Book Mordor transport          project:travel.mordor.logistics
+    $ task add Book Mordor accommodation      project:travel.mordor.logistics
+    $ task add Renew Visa                     project:travel.mordor.legal
+--
+    $ task /Mordor transort/ done
+
+    Completed task f08d6fe7 'Book MordorCon transport'
+    Completed 1 task.
+    Project 'travel.mordor.logistics' is now 50% complete (1 of 2 tasks remaining)
+--
+Great for
+multi-step
+tasks
+--
+    $ task projects
+
+    Project         Tasks
+    =======         =====
+    travel             40
+      confoo            3
+        yvr17           3
+      lca18             2
+      nz17             15
+        shopping        5
+      oscon17          11
+      tryswift17        6
+--
+    # Show all travel tasks
+    $ task project:travel
+
+    # Show Confoo-related travel tasks
+    $ task project:travel.confoo
+--
+Moving house?
+Use a project!
+--
+Contexts!
+--
+    # Define some contexts
+
+    $ task context define work      project:work
+    $ task context define cyberdyne project:work.cyberdyne
+    $ task context define personal  project.not:work project.not:fun -fun
+    $ task context define fun       project:fun or +fun
+--
+
+    # Focus on cyberdyne tasks
+    $ task context cyberdyne
+
+    # Get some personal work done
+    $ task context personal
+
+    # Relaxation time!
+    $ task context fun
+--
+
+    # List available contexts
+    $ task context list
+
+    # Show current context
+    $ task context show
+
+    # Clear current context
+    $ task context none

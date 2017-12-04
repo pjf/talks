@@ -1,0 +1,37 @@
+Tips!
+--
+Hard deadlines
+due:
+--
+Soft deadlines
+scheduled:
+
+# It's nice to be able to trust your
+# TODO list.
+--
+Generously use
+until:
+
+# Keeps your list clean
+# Kees you honest
+--
+Delete
+generously
+
+# Nothing wrong saying you
+# won't do something
+#
+# You can always undelete
+--
+    $ task 31 done Presented talk at ConFoo
+    $ task 23 delete No longer relevant
+
+# End tasks with a summary
+--
+Review tasks
+reguarly!
+
+# tasksh comes with review functionality, but it's not my workflow
+# Kusarigama looks like it has something more my style
+--
+

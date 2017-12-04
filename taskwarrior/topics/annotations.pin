@@ -1,0 +1,34 @@
+Taking
+Notes
+--
+Annotations
+--
+    $ task 31 annotate "Don't forget to discuss annotations"
+
+    Annotating task c7318895 'Write full-length talk on using taskwarrior'.
+    Annotated 1 task.
+    Project 'speaking.new' is 50% complete (1 of 2 tasks remaining).
+--
+    $ task
+
+    ID Age  P Project      Tags   Description                                 Urg
+    == ==== = ============ ====== =========================================== ====
+    31 5mo  H speaking.new confoo Write full-length talk on using taskwarrior 18.3
+                                    2017-12-03 Don't forget to discuss
+                                  annotations
+--
+Auto
+timestamp
+
+# Great for taking notes and paper trails
+--
+Show
+by default
+--
+I prefer 
+description.count
+--
+    ID Age  P Project      Tag    Description                                     Urg
+    == ==== = ============ ====== =============================================== ====
+    31 5mo  H speaking.new confoo Write full-length talk on using taskwarrior [2] 18.3
+
