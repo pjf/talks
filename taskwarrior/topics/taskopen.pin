@@ -11,8 +11,8 @@ in annotations
     Annotated 1 task.
 --
     $ taskopen 12
---
-    ((Web Browser))
+-- [images/beeminder.png]
+
 --
     $ task add Finish report
     Created task 13.
@@ -22,12 +22,12 @@ in annotations
 
     $ taskopen 13
 --
-((Libreoffice))
+    LibreOffice!
 --
     $ task annotate 42 Notes
     $ taskopen 42
 --
-    ((Opens your favourite editor))
+    Vim!
 --
 Has lots
 of options

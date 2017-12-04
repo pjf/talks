@@ -6,11 +6,8 @@ Paul '@pjf' Fenwick
 My story...
 --
 I procrastinate
---
-(amusing procrastination img)
---
-Easily
-distracted
+-- [images/distracted-cat.jpg]
+# Easily distracted
 --
 Terrible
 memory
@@ -20,9 +17,6 @@ Task management
 --
 Tried dozens
 of systems
---
-(Wall Pic)
-# But I always hit a wall
 --
 "Simple and Easy"
 →
@@ -39,8 +33,9 @@ things in
 # But I rarely feel it's a good idea
 # And it never really fit with my workflow
 --
-((command prompt))
---
+~$ 
+
+# I live on my command prompt
 -- [images/taskwarrior.png]
 # So when I heard about TaskWarrior
 --
@@ -49,8 +44,7 @@ Text-oriented
 --
 Task Management
 System
---
-((Learning Curve))
+-- [images/learning-curve.jpg]
 
 # I didn't fear the learning curve
 # Instead, I dived right in

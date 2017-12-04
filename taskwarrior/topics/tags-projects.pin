@@ -8,8 +8,11 @@ Tags
 Unstructured
 Many-to-many
 --
-    $ task add Buy mini-screwdriver set +shopping
-    $ task add Ping client on invoice payment +phone +cyberdyne
+    $ task add Buy mini-screwdriver set \
+        +shopping
+
+    $ task add Ping client on invoice payment \
+        +phone +cyberdyne
 --
     # Fix incorrect client in last task
     $ task +LATEST modify -cyberdyne +shinra
@@ -52,9 +55,14 @@ Projects
 --
 Hierarchical
 --
-    $ task add Book Mordor transport          project:travel.mordor.logistics
-    $ task add Book Mordor accommodation      project:travel.mordor.logistics
-    $ task add Renew Visa                     project:travel.mordor.legal
+    $ task add Book Mordor transport \
+        project:travel.mordor.logistics
+
+    $ task add Book Mordor accommodation \
+        project:travel.mordor.logistics
+
+    $ task add Renew Visa \
+        project:travel.mordor.legal
 --
     $ task /Mordor transort/ done
 
@@ -92,10 +100,17 @@ Contexts!
 --
     # Define some contexts
 
-    $ task context define work      project:work
-    $ task context define cyberdyne project:work.cyberdyne
-    $ task context define personal  project.not:work project.not:fun -fun
-    $ task context define fun       project:fun or +fun
+    $ task context define work      \
+        project:work
+
+    $ task context define cyberdyne \
+        project:work.cyberdyne
+
+    $ task context define personal  \
+        project.not:work project.not:fun -fun
+
+    $ task context define fun       \
+        project:fun or +fun
 --
 
     # Focus on cyberdyne tasks
