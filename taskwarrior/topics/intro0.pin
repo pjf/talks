@@ -37,19 +37,12 @@ things in
 -- [images/PowerAdapterOfDoom.jpg]
 
 # But I rarely feel it's a good idea
+# And it never really fit with my workflow
 --
-My
-history
+((command prompt))
 --
-Perl's
-autodie
-
-# I've written parts of the Perl language
---
-Dwarf Fortress
-mods
-
-# I've written mods for the world's hardest game
+Coded parts
+of Perl
 --
 ((img: Google Calendar in vim))
 --
@@ -83,22 +76,22 @@ for most people
 
 # I want acknowledge that..
 --
+TaskWarrior is
+workflow agnostic
+--
 TaskWarrior may
 not be for you
---
-((Glorious))
+-- [images/buzz.jpg]
 
 # But if it is, then it's
 # utterly, utterly glorious
 --
 Tour of features
 I use the most
---
-There's a *lot*
-more beyond this
-talk
+-- [images/task-cheat.png]
 
-# I'll teach you
-# what I know
+# It has a LOT of features
+# I can't cover them all
 --
-
+I'll teach
+what I know

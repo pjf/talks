@@ -10,8 +10,8 @@ my shell
 
 # Because I live here
 --
-Shell
-Integration
+Shell prompt
+integration
 --
     ~/.bashrc
 --
@@ -35,11 +35,9 @@ Integration
             echo "$DUETOMORROW"
         elif [ `$TASK +READY urgency \> 10 count` -gt "0" ]; then
             echo "$URGENT"
---
         else
             echo '$'
         fi
-    }
 --
 +READY
 →
@@ -48,4 +46,7 @@ don't count
 --
     PS1="... \$(task_indicator) ..."
 --
-    PS1="\[\e]0;\u@\h: \w\a\]"'$(BRANCH=`git rev-parse --abbrev-ref HEAD 2> /dev/null`; if [ -n "$BRANCH" ]; then DIRTY=`git status --porcelain --untracked-files=no 2> /dev/null`; if [ -n "$DIRTY" ]; then echo "'$BRed'$CROSS "; else echo "'$BGreen'$TICK "; fi; fi;)'"$Color_Off${debian_chroot:+($debian_chroot)}\w$BYellow\$(__git_ps1)\$(task_indicator) $Color_Off"
+    PS1="\[\e]0;\u@\h: \w\a\]"'$(BRANCH=`git rev-parse --abbrev-ref HEAD 2> /dev/null`;
+        if [ -n "$BRANCH" ]; then DIRTY=`git status --porcelain --untracked-files=no 2> /dev/null`;
+        if [ -n "$DIRTY" ]; then echo "'$BRed'$CROSS "; else echo "'$BGreen'$TICK "; fi; fi;)'"
+        $Color_Off${debian_chroot:+($debian_chroot)}\w$BYellow\$(__git_ps1)\$(task_indicator) $Color_Off"

@@ -4,13 +4,18 @@
 [white][text-color=black]
 [shading-opacity=0.0]
 [text-align=center]
-[duration=30]
+[duration=45]
 
 --
 
 @include <intro0.pin>
 @include <intro.pin>
 @include <tidy.pin>
+
+Tools and
+Plugins
+--
 @include <taskopen.pin>
 @include <bugwarrior.pin>
 @include <shell.pin>
+@include <outro.pin>

@@ -1,25 +1,3 @@
-TaskWarrior
-all the things
-
-# Ack Dirk Deimeke slides
-# https://git.tasktools.org/ST/guides/src/master
---
-To-do
-list
---
-Task Management
-Toolkit
---
-Command-line
---
-Methodology
-Neutral
---
-Hugely
-extensible
---
-taskwarrior.org
---
 Let's see
 examples!
 --
@@ -55,14 +33,10 @@ examples!
 
     2 tasks
 --
-Cool
+Tasks
+renumber
 --
-So...?
--- [images/task-cheat.png]
-
-# HOLY SMOKES IT DOES EVERYTHING!
---
-Urgency
+Urgency?
 --
 Some tasks
 more important
@@ -89,7 +63,7 @@ Deadlines, Priorities
 →
 More Urgency
 --
-Fully
+Highly
 configurable
 --
     ~/.taskrc
@@ -173,8 +147,9 @@ Protect against
 typos?
 --
     uda.customer.string = Tyrell,Cyberdyne,Aperture Science,Shinra,Umbrella
---
+-- [text-align=left]
 Types:
+
  - string
  - date
  - duration

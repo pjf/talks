@@ -13,7 +13,7 @@ Hide until
 --
   $ task add Send Dad birthday card \
         wait:2017-12-12 \
-        schedule:2017-12-15 \
+        schedule:2017-12-15 
 --
 Schedule
 →
