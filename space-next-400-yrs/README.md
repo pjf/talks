@@ -31,3 +31,5 @@ of humanity in space.
 
 You can find my citation and reference database for this talk
 [in Zotero](https://www.zotero.org/pjf/items/collectionKey/QMIE7ZWJ).
+
+The Psyche mission also has a [twitter account](https://twitter.com/NASAPsyche).
