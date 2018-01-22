@@ -18,27 +18,40 @@ Always Solar
 Noon
 
 # MOAR effiency
-#
-# 5x more effective than perfect cells according to http://www.powersat.com/details.html
-# Up to 25x more effective in cloudy areas.
+--
+5x more
+effective
+
+# A solar cell in space is
+# 5x more effective than one
+# on the ground
+--
+25x more
+in cloudy areas
+
+<cite>http://powersat.com/details.html</cite>
 --
 National Goals:
 
 Japan (1GW, 2030s)
 China (1GW, 2050s)
 
+# 1GW = 700,000 homes
 --
 Big
-Plants
+Projects
+
+# Those represent
+# big projects!
 --
 12.5km²
 ground station
 --
-10,000 tonnes
-orbital structure
---
-7x efficiency
-ground-solar
+7x land-use
+efficiency
+
+# compared to
+# ground-solar
 
 # Compared to land use at
 # our best ground-solar plants
@@ -73,18 +86,32 @@ ground-solar
 # almost 7 times more
 # effective per unit land
 --
-Continuous
-Operation
+Works at
+night
+--
+Works when
+cloudy
+--
+Works at
+high latitudes
 
-# So much sense for
-#
-# higher laitutdes,
-# cloudy locations
-#
-# places with night
+-- [images/suntower.jpg][bottom-right][text-color=white][font=25px]
+
+Image: Nasa♥
+Arndt, G. D., and L. G. Monford. “Solar Power Satellite System Sizing Tradeoffs,” 1981.
+http://ntrs.nasa.gov/search.jsp?R=19810009968.
+
+# Thousands of tonnes
+# orbital structure
+
+# ~ 60k tonnes for a 5GW system
+# ~ 10k tonnes for 1GW assuming same scale
 --
 Orbital
 Manufacture
+
+# Enormous incentives for
+# orbital manufacture
 --
 Photovoltaics
 from Luna
