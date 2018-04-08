@@ -72,7 +72,7 @@ Done in TaskWarrior
     [gmail]
     service = gmail
     gmail.login_name = paul.j.fenwick@gmail.com
-    gmail.query = in:pinned
+    gmail.query = label:pinned OR label:snoozed
 --
 Description
 manipulation
