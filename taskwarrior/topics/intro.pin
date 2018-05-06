@@ -35,3 +35,9 @@ examples!
 --
 Tasks
 renumber
+--
+    $ task 1 done Reservation number 17607067425
+
+# Record an annotation and complete
+# We'll see more about annotations later
+--

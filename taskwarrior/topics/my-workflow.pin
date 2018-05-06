@@ -1,0 +1,57 @@
+Each day
+--
+`taskup`
+
+Sync tasks with gmail
+--
+((Show taskup code))
+--
+Look through all tasks
+--
+Bankrupt (delete)
+any tasks I can
+
+# Tasks I'll never do
+# Tasks that don't matter any more
+--
+    $ task 4 delete "It's been a year, I'm never doing this."
+--
+Schedule tasks
+for when I intend
+to do them
+--
+    $ task 3 schedule:+3d
+    $ task 7 schedule:tomorrow
+    $ task 1 schedule:today
+--
+After that, <i>only</i>
+look at scheduled/due
+tasks
+--
+    $ alias today="task '(scheduled.before:tomorrow or due.before:tomorrow)' next"
+    $ alias to=today
+
+    # See only today's tasks
+    $ to
+--
+Shortlisting
+is key
+
+# It's easy to feel overwhelmed
+--
+Reviews have
+to happen
+
+# Otherwise one can miss tasks
+--
+Once today's tasks
+are done, can look
+at remainder
+--
+Daily review
+better than
+weekly review
+
+# For me, anyway.
+# The idea is to keep my to-do list small enough that the review isn't overwhelming.
+# I don't need to *touch* every task, only those that need scheduling, deleting, or updating
