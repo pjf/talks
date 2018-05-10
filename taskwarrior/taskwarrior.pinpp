@@ -21,6 +21,7 @@ Plugins
 @include <taskopen.pin>
 @include <bugwarrior.pin>
 @include <gmail.pin>
+@include <my-workflow.pin>
 @include <shell.pin>
 @include <much-more.pin>
 @include <outro.pin>

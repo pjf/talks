@@ -1,5 +1,7 @@
-Taking
-Notes
+-- [images/notepad95-icon.png][bottom][text-color=white][shading-opacity=0.5]
+
+Taking Notes
+
 --
 Annotations
 --
@@ -20,15 +22,43 @@ Annotations
 Auto
 timestamp
 
+-- [images/ribbons-cat.jpg]
+
 # Great for taking notes and paper trails
 --
 Show
 by default
 --
 I prefer 
-description.count
+<span font="monospace">description.count</span>
 --
     ID Age  P Project      Tag    Description                                     Urg
     == ==== = ============ ====== =============================================== ====
     31 5mo  H speaking.new confoo Write full-length talk on using taskwarrior [2] 18.3
+--
+    $ task 31
 
+    Name          Value                                                     
+    ====          =====
+    ID            31                                                         
+    Description   Write full-length talk on using taskwarrior
+                    2017-12-04 04:55:54 Testing annotations
+                    2017-12-05 05:25:45 Going to present at ConFoo
+    Status        Pending
+    Project       speaking.new
+    Entered       2017-07-06 17:09:01 (10mo)
+    Due           2017-12-05 05:56:05
+    Last modified 2017-12-05 05:25:46 (5mo)
+    Tags          confoo
+    Virtual tags  ANNOTATED PENDING TAGGED UDA UNBLOCKED PROJECT PRIORITY
+    UUID          c7318895-be3e-4f4d-adcc-c7db95684ad7
+    Urgency       22.47
+    Priority      H
+
+--
+
+    # Complete with annotation
+    $ task 31 done Talk completed
+
+    # Delete with annotation
+    $ task 23 delete Project cancelled

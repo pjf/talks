@@ -27,7 +27,7 @@ in annotations
     $ task annotate 42 Notes
     $ taskopen 42
 --
-    Vim!
+    ((Vim!))
 --
 Has lots
 of options

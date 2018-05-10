@@ -1,5 +1,7 @@
-Working with
-dates
+-- [images/dates.jpg][bottom][text-color=white][font=25px]
+CC-BY-SA: Hans Hillewaert
+
+# Working with dates
 --
   $ task add Send Dad birthday card \
         wait:2017-12-12 
@@ -7,6 +9,8 @@ dates
 Wait
 →
 Hide until
+
+# Snooze
 --
   # Show all waiting tasks
   $ task waiting 
@@ -15,6 +19,8 @@ Hide until
   $ task 42 modify wait:tomorrow
 --
   $ task 42 modify wait:+5d
+
+  # Five days from *now*
 --
   $ task add Send Dad birthday card \
         wait:2017-12-12 \

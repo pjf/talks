@@ -1,13 +1,20 @@
-Working
-with others
+-- [images/tetris-cosplay.jpg][text-color=white][shading-opacity=0.5][bottom]
+
+Working with others
+
+# I don't have attribution for this image. Halp!
 --
 BugWarrior
+Sync
+Remote Trackers
+→
+TaskWarrior
 -- [images/omg-cat.jpg]
 
---
-Sync remote
-issue trackers
-to bugwarrior
+# When I first saw BugWarrior
+# my heart stopped
+#
+# I had been seeking this all my life
 --
 Github
 Trello
@@ -32,6 +39,17 @@ YouTrack
 All my
 tasks in
 one place
+-- [images/windows-xp-bliss.jpg]
+
+# It's like heaven!
+-- [images/laptop-fire.jpg][text-color=black][bottom][font=25px]
+CC-BY-SA: secumem
+
+# If heaven consisted entirely
+# critical bugs and unanswered
+# emails
+#
+# https://commons.wikimedia.org/wiki/File:Burned_laptop_secumem_11.jpg
 --
     ~/.bugwarriorrc
 --
@@ -41,10 +59,10 @@ one place
     github.token = secret
 --
 Use Trello
-with
-my partner
+with cooperative
+projects
 --
-    [trello-kate]
+    [trello-roomservice]
     service = trello
     trello.api_key = secret
     trello.token = secret
@@ -87,4 +105,4 @@ Enable/Disable
 Services
 --
     [general]
-    targets = trello-kate, trello-work, gmail
+    targets = trello-roomservice, trello-work, gmail
