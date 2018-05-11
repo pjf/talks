@@ -25,10 +25,12 @@ generously
 #
 # You can always undelete
 --
+
+    # End tasks with a summary
+
     $ task 31 done Presented talk at ConFoo
     $ task 23 delete No longer relevant
 
-# End tasks with a summary
 --
 Review tasks
 regularly!

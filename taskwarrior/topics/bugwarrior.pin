@@ -5,7 +5,7 @@ Working with others
 # I don't have attribution for this image. Halp!
 --
 BugWarrior
-Sync
+Syncs
 Remote Trackers
 →
 TaskWarrior
@@ -45,7 +45,7 @@ one place
 -- [images/laptop-fire.jpg][text-color=black][bottom][font=25px]
 CC-BY-SA: secumem
 
-# If heaven consisted entirely
+# If heaven consisted entirely of
 # critical bugs and unanswered
 # emails
 #
@@ -78,7 +78,7 @@ Customise title
 and project
 --
     trello.description_template = {{trellocard}}
-    trello.project_template = kate.trello
+    trello.project_template = roomservice.trello
 --
 Per-board
 settings

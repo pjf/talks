@@ -29,8 +29,7 @@ timestamp
 Show
 by default
 --
-I prefer 
-<span font="monospace">description.count</span>
+    description.count
 --
     ID Age  P Project      Tag    Description                                     Urg
     == ==== = ============ ====== =============================================== ====

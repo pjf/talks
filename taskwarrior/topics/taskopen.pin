@@ -26,8 +26,8 @@ in annotations
 --
     $ task annotate 42 Notes
     $ taskopen 42
---
-    ((Vim!))
+-- [images/vim.png]
+
 --
 Has lots
 of options

@@ -32,7 +32,7 @@ configurable
 
     urgency.user.tag.costly.coefficient = 3.0
 --
-    urgency.user.project.leisure.coefficient = 0
+    urgency.user.project.fun.coefficient = 0
 --
     $ task 31
 
@@ -89,3 +89,18 @@ But I like:
     # Swap none and low priority levels
     urgency.uda.priority.L.coefficient=0
     urgency.uda.priority..coefficient=1.8
+--
+
+    $ task add Buy pumpkin
+    Created task 12
+
+    $ task add Make pumpkin soup
+        depends:12
+--
+
+    # ~/.taskrc
+
+
+    # Use ancestral urgency if higher than own
+
+    urgency.inherit=on

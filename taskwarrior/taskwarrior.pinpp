@@ -20,13 +20,12 @@ Plugins
 --
 @include <taskopen.pin>
 @include <bugwarrior.pin>
-@include <gmail.pin>
 @include <my-workflow.pin>
 @include <shell.pin>
 @include <much-more.pin>
 @include <outro.pin>
 
-Bonus Section
---
-@include <udas.pin>
-@include <tips.pin>
+// Bonus Section
+// --
+// @include <udas.pin>
+// @include <tips.pin>

@@ -1,3 +1,6 @@
+So much
+more!
+--
 Graphical
 reports
 -- [images/burndown.png]
@@ -16,6 +19,7 @@ Build Your Own
 Reports
 --
 Hooks
+<span font="50px">(eg: git integration)</span>
 --
 Recurring
 Tasks
@@ -23,8 +27,12 @@ Tasks
 Advanced
 Filters
 --
-Online
-Sync
+User Defined
+Attributes
+-- [images/intheam1.png]
 
-inthe.am
---
+-- [images/intheam2.png]
+
+# Open source
+# Spin up your own
+

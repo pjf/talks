@@ -36,7 +36,7 @@ coworkers!
 
 # This is AMAZING
 --
-    alias emma="task +emmajane"
+    alias ej="task +emmajane"
 
     # See everything you need to discuss in one step!
 --
@@ -99,14 +99,19 @@ tasks
       oscon17          11
       tryswift17        6
 --
+
     # Show all travel tasks
     $ task project:travel
 
-    # Show Confoo-related travel tasks
-    $ task project:travel.confoo
+    # Show Mordor-related travel tasks
+    $ task project:travel.mordor
 --
 Moving house?
 Use a project!
+
+# moving.mail
+# moving.packing
+# moving.utilities
 --
 Contexts!
 --
@@ -137,7 +142,7 @@ Contexts!
 
     # Better with aliases
 
-    alias cb="task context cyberdyne"
+    alias cyb="task context cyberdyne"
     alias personal="task context personal"
     alias fun="task context fun"
 --

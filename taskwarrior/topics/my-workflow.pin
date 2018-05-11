@@ -1,11 +1,46 @@
-Each day
+My Workflow
+--
+inbox.google.com
 --
 `taskup`
 
 Sync tasks with gmail
+-- [text-align=left]
+
+* Hide snoozed tasks
+* Unhide active tasks
+* Don't touch non-gmail tasks
+
 --
-((Show taskup code))
+
+    #!/bin/sh
+
+    # Update from our remote sources
+    # gmail.query = label:pinned OR label:snoozed
+    bugwarrior-pull
 --
+
+    # Hide snoozed tasks
+
+    yes | task                  \\
+        gmailurl.any:           \\ # Only gmail tasks
+        gmaillabels.hasnt:INBOX \\ # Not in my inbox
+        +PENDING                \\ # Not completed
+        modify                  \\ # Change by...
+               -INBOX           \\ # ...clearing INBOX tag
+                wait:+7d        \\ # ...hiding in TaskWarrior
+--
+    # Un-hide active tasks
+
+    yes | task                \\
+        gmaillabels.has:INBOX \\ # In my inbox
+        +WAITING              \\ # Waiting in TaskWarrior
+        modify                \\ # Change by...
+               +INBOX         \\ # ...adding INBOX tag
+                wait:         \\ # ...clearing wait status
+
+--
+Next:
 Look through all tasks
 --
 Bankrupt (delete)
@@ -14,7 +49,8 @@ any tasks I can
 # Tasks I'll never do
 # Tasks that don't matter any more
 --
-    $ task 4 delete "It's been a year, I'm never doing this."
+    $ task 4 delete \\
+        "It's been a year, I'm never doing this."
 --
 Schedule tasks
 for when I intend
@@ -24,11 +60,15 @@ to do them
     $ task 7 schedule:tomorrow
     $ task 1 schedule:today
 --
-After that, <i>only</i>
-look at scheduled/due
-tasks
+<i>Only</i> look at
+current tasks
 --
-    $ alias today="task '(scheduled.before:tomorrow or due.before:tomorrow)' next"
+
+    $ alias today="task '( \\
+        scheduled.before:tomorrow or \\
+        due.before:tomorrow \\
+    )' next"
+
     $ alias to=today
 
     # See only today's tasks
@@ -39,18 +79,15 @@ is key
 
 # It's easy to feel overwhelmed
 --
-Reviews have
+Reviews <i>have</i>
 to happen
 
 # Otherwise one can miss tasks
 --
-Once today's tasks
-are done, can look
-at remainder
---
 Daily review
 better than
 weekly review
+<span font="50px">(for me!)</span>
 
 # For me, anyway.
 # The idea is to keep my to-do list small enough that the review isn't overwhelming.

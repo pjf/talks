@@ -34,7 +34,7 @@ after this date
 Scheduled
 <i>hides</i>
 tasks on
-`task ready`
+<span font="mono">`task ready`</span>
 --
   $ task add Send Dad birthday card \
         wait:2017-12-12 \
@@ -42,7 +42,7 @@ tasks on
         until:2017-12-25
 --
 Until
-—>
+→
 Delete after
 this date
 
