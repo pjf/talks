@@ -3,8 +3,8 @@ CC-BY-SA: Hans Hillewaert
 
 # Working with dates
 --
-  $ task add Send Dad birthday card \
-        wait:2017-12-12 
+  $ task add Send Dad birthday card \\
+        <b>wait:2017-12-12</b>
 --
 Wait
 →
@@ -22,9 +22,9 @@ Hide until
 
   # Five days from *now*
 --
-  $ task add Send Dad birthday card \
-        wait:2017-12-12 \
-        schedule:2017-12-15 
+  $ task add Send Dad birthday card \\
+        wait:2017-12-12             \\
+        <b>schedule:2017-12-15</b>
 --
 Schedule
 →
@@ -36,10 +36,10 @@ Scheduled
 tasks on
 <span font="mono">`task ready`</span>
 --
-  $ task add Send Dad birthday card \
-        wait:2017-12-12 \
-        schedule:2017-12-15 \
-        until:2017-12-25
+  $ task add Send Dad birthday card \\
+        wait:2017-12-12             \\
+        schedule:2017-12-15         \\
+        <b>until:2017-12-25</b>
 --
 Until
 →
@@ -51,10 +51,10 @@ this date
 --
 Relative dates!
 --
-  $ task add Send Dad birthday card \
-        due:2017-12-18
-        schedule:"due - 3d" \
-        wait:"due - 6d" \
+  $ task add Send Dad birthday card \\
+        due:2017-12-18              \\
+        schedule:"due - 3d"         \\
+        wait:"due - 6d"             \\
         until:"due + 3d"
 --
 Relative to
@@ -63,9 +63,9 @@ other tasks
   $ t /conference/ ids
   8
 
-  $ task add Book flights \
-        schedule: "8.due - 30d"
-        until: "8.due"
+  $ task add Book flights       \\
+        schedule: "8.due - 30d" \\
+        until: "8.due"          \\
 --
 Amazing for
 scripting!

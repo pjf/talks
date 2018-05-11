@@ -1,6 +1,5 @@
 -- [images/organised-cats.jpg][text-color=white][top][shading-opacity=0.5]
-Keeping things
-organised
+Organising Tasks
 --
 Tags
 
@@ -9,13 +8,15 @@ Tags
 Unstructured
 Many-to-many
 --
-    $ task add Buy mini-screwdriver set \
+    $ task add Buy mini-screwdriver set \\
         +shopping
 
-    $ task add Ping client on invoice payment \
+    $ task add Ping client on invoice payment \\
         +phone +cyberdyne
 --
+
     # Fix incorrect client in last task
+
     $ task +LATEST modify -cyberdyne +shinra
 --
 Great for
@@ -65,13 +66,13 @@ Projects
 --
 Hierarchical
 --
-    $ task add Book Mordor transport \
+    $ task add Book Mordor transport \\
         project:travel.mordor.logistics
 
-    $ task add Book Mordor accommodation \
+    $ task add Book Mordor accommodation \\
         project:travel.mordor.logistics
 
-    $ task add Renew Visa \
+    $ task add Renew Visa \\
         project:travel.mordor.legal
 --
     $ task /Mordor transport/ done
@@ -91,8 +92,8 @@ tasks
     Project         Tasks
     =======         =====
     travel             40
-      confoo            3
-        yvr17           3
+      yvr17             3
+        confoo          3
       lca18             2
       nz17             15
         shopping        5
@@ -117,16 +118,16 @@ Contexts!
 --
     # Define some contexts
 
-    $ task context define work      \
+    $ task context define work      \\
         project:work
 
-    $ task context define cyberdyne \
+    $ task context define cyberdyne \\
         project:work.cyberdyne
 
-    $ task context define personal  \
+    $ task context define personal  \\
         project.not:work project.not:fun -fun
 
-    $ task context define fun       \
+    $ task context define fun       \\
         project:fun or +fun
 --
 

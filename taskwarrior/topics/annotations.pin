@@ -9,7 +9,6 @@ Annotations
 
     Annotating task c7318895 'Write full-length talk on using taskwarrior'.
     Annotated 1 task.
-    Project 'speaking.new' is 50% complete (1 of 2 tasks remaining).
 --
     $ task
 
@@ -57,7 +56,7 @@ by default
 --
 
     # Complete with annotation
-    $ task 31 done Talk completed
+    $ task 31 done <b>Talk completed</b>
 
     # Delete with annotation
-    $ task 23 delete Project cancelled
+    $ task 23 delete <b>Project cancelled</b>
