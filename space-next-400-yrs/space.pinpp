@@ -4,11 +4,11 @@
 [white][text-color=black]
 [shading-opacity=0.0]
 [text-align=center]
-[duration=30]
+[duration=45]
 
 --
 @include <intro.pin>
-// @include <buzz-400.pin>
+@include <buzz-400.pin>
 @include <why-space.pin>
 @include <asteroid-mining.pin>
 @include <solar-satellites.pin>
@@ -18,8 +18,8 @@
 @include <asteroid-defence.pin>
 
 @include <16-psyche.pin>
-@include <outro-nobuzz.pin>
-// @include <outro.pin>
+// @include <outro-nobuzz.pin>
+@include <outro.pin>
 
 // - Resource usage on Earth
 // - Things common in space, but rare on Earth
