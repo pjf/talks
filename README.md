@@ -23,6 +23,8 @@ A typical directory will look like:
 There may also be other files (such as `plan.txt`) in which I've been
 brainstorming ideas, but which may or may not be relevant to the final talks.
 
+Files with an `.odp` extension are [LibreOffice](https://www.libreoffice.org/) presentation files.
+
 ## Building and running
 
 - Install `pinpp`, the pinpoint pre-processor (`cpanm App::Pinpp`)
