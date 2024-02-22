@@ -1,0 +1,20 @@
+total 53344
+-rw-r--r-- 1 pjf pjf      132 Jul 30  2009 autobox-core.pl
+-rw-r--r-- 1 pjf pjf      327 Jul 30  2009 autobox.pl
+-rw-r--r-- 1 pjf pjf 15142774 Dec  6 09:05 awesome-things.odp
+drwxrwxr-x 5 pjf pjf     4096 Dec  5 22:06 Beeminder-Shim
+-rw-r--r-- 1 pjf pjf 22366188 Jul 30  2009 doing-perl-right.odp
+-rw-r--r-- 1 pjf pjf      133 Jul 30  2009 doing-perl-right-TODO.txt
+drwxrwxr-x 3 pjf pjf     4096 Dec  5 11:20 Example
+drwxrwxr-x 4 pjf pjf     4096 Dec  5 12:45 Foo
+drwxr-xr-x 6 pjf pjf     4096 Jul 30  2009 Games-GuitarHero-Stats
+-rw-r--r-- 1 pjf pjf    14380 Jul 30  2009 jarich-module-starter.odp
+-rw-rw-r-- 1 pjf pjf        0 Dec  6 09:08 ls-data.txt
+-rw-r--r-- 1 pjf pjf     2224 Jul 30  2009 moose.pl
+-rw-rw-r-- 1 pjf pjf      200 Dec  5 10:27 osdc-outline.txt
+-rw-r--r-- 1 pjf pjf     3883 Jul 30  2009 outline.txt
+-rwxrwxr-x 1 pjf pjf      408 Dec  4 17:19 parse-ls.pl
+-rw-rw-r-- 1 pjf pjf   120751 Dec  5 16:19 suburb.regexp
+-rw-rw-r-- 1 pjf pjf       58 Dec  4 13:17 todo.txt
+-rw-rw-r-- 1 pjf pjf 16895388 Oct 19 13:51 tucs-awesome-things.odp
+-rw-rw-r-- 1 pjf pjf    25023 Dec  6 09:08 ul 30  2009 autobox-core.pl
